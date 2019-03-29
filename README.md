@@ -17,10 +17,12 @@
 <!-- * [front-end](http://xyz.com) (when applicable) -->
 
 #### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](local) (All assignments)
+* [swagger](http://xyz.com) - still working on this.
+* [jsdoc](localhost:3000/docs)
+  * currently getting this error when trying to access from local host {"error":"Resource Not Found"}
+  * works with live-server at this route http://127.0.0.1:8080/docs/index.html
 
-### Modules
+<!-- ### Modules
 #### `modulename.js`
 ##### Exported Values and Methods
 
@@ -28,24 +30,25 @@
 Usage Notes or examples
 
 ###### `bar(array) -> array`
-Usage Notes or examples
+Usage Notes or examples -->
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `PORT` - 3000
+* `MONGODB_URI` - MONGODB_URI=mongodb://localhost:27017/baseball
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
+<!-- * Endpoint: `/foo/bar/`
   * Returns a JSON object with abc in it.
 * Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+  * Returns a JSON object with xyz in it. -->
   
 #### Tests
 * How do you run tests?
 * What assertions were made?
 * What assertions need to be / should be made?
+  * all of them
 
 #### UML
-Link to an image of the UML for your application and response to events
+![UML Image](assets/uml.jpg)
