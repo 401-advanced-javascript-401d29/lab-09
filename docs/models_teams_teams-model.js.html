@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: middleware/500.js</title>
+    <title>JSDoc: Source: models/teams/teams-model.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: middleware/500.js</h1>
+    <h1 class="page-title">Source: models/teams/teams-model.js</h1>
 
     
 
@@ -28,22 +28,20 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict';
 
-/**
- * 500 Middleware
- * @module middleware/500
- */
+const Model = require('../mongo-model.js');
+const schema = require('./teams-schema.js');
 
 /**
- * Sends a JSON Formatted 404 Response
- * @param err {string} Error Text
- * @param req {object} Express Request Object
- * @param res {object} Express Response Object
- * @param next {function} Express middleware next()
+ * Class that uses the methods from the model
  */
-module.exports = (err, req, res, next) => {
-  let error = { error: err };
-  res.status(500).json(error).end();
-};</code></pre>
+class Teams extends Model {}
+/**
+ * Exports the teams model
+ * @param  {object} schema
+ */
+module.exports = new Teams(schema);
+
+</code></pre>
         </article>
     </section>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: middleware/model-finder</title>
+    <title>JSDoc: Module: models/players/players-model</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: middleware/model-finder</h1>
+    <h1 class="page-title">Module: models/players/players-model</h1>
 
     
 
@@ -40,7 +40,7 @@
     <div class="container-overview">
     
         
-            <div class="description">Model Finder Middleware</div>
+            <div class="description">Players Model</div>
         
 
         
@@ -49,7 +49,7 @@
     
 
     
-    <h4 class="name" id="module:middleware/model-finder"><span class="type-signature"></span>(require("middleware/model-finder"))<span class="signature">(req, res, next)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="module:models/players/players-model"><span class="type-signature"></span>module:models/players/players-model<span class="type-signature"></span></h4>
     
 
     
@@ -57,10 +57,7 @@
 
 
 <div class="description">
-    Model Finder Middleware
-Evaluates req.params.model (i.e. /api/v1/:model/) and returns an instance of the specified model.
-Because node require is cached, the instance will only be created once, no matter how many times a model is called for.
-In the event the model is not found, node will throw a "MODULE_NOT_FOUND" error which the error middleware in the server will pick up.
+    Gives access to the mongo-model functions and classes
 </div>
 
 
@@ -96,7 +93,7 @@ In the event the model is not found, node will throw a "MODULE_NOT_FOUND" error 
 
         <tr>
             
-                <td class="name"><code>req</code></td>
+                <td class="name"><code>schema</code></td>
             
 
             <td class="type">
@@ -112,53 +109,7 @@ In the event the model is not found, node will throw a "MODULE_NOT_FOUND" error 
 
             
 
-            <td class="description last">Express Request Object</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>res</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Express Response Object</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>next</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Express middleware next()</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -199,7 +150,7 @@ In the event the model is not found, node will throw a "MODULE_NOT_FOUND" error 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="middleware_model-finder.js.html">middleware/model-finder.js</a>, <a href="middleware_model-finder.js.html#line16">line 16</a>
+        <a href="models_players_players-model.js.html">models/players/players-model.js</a>, <a href="models_players_players-model.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -273,7 +224,7 @@ In the event the model is not found, node will throw a "MODULE_NOT_FOUND" error 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="middleware_model-finder.js.html">middleware/model-finder.js</a>, <a href="middleware_model-finder.js.html#line2">line 2</a>
+        <a href="models_players_players-model.js.html">models/players/players-model.js</a>, <a href="models_players_players-model.js.html#line3">line 3</a>
     </li></ul></dd>
     
 
