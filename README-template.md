@@ -6,14 +6,19 @@
 ### Author: Erin Trainor
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [PR](https://github.com/401-advanced-javascript-401d29/lab-09/pull/2)
+* travis [![Build Status](https://www.travis-ci.com/401-advanced-javascript-401d29/lab-09.svg?branch=master)](https://www.travis-ci.com/401-advanced-javascript-401d29/lab-09)
+* [back-end](https://api-server-401javascript.herokuapp.com/)
+  * Note: I am getting the following error when I try to deploy to Heroku
+  `No default language could be detected for this app.
+			HINT: This occurs when Heroku cannot detect the buildpack to use for this application automatically.
+			See https://devcenter.heroku.com/articles/buildpacks
+ !     Push failed` 
+<!-- * [front-end](http://xyz.com) (when applicable) -->
 
 #### Documentation
 * [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
+* [jsdoc](local) (All assignments)
 
 ### Modules
 #### `modulename.js`
