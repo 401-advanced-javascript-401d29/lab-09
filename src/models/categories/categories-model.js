@@ -14,6 +14,7 @@ const schema = {
 class Categories extends Model {}
 
 /**
- * Exports a schema for an New Categories
+ * Exports a schema for an New Category to the memory server
+ * @param  {object} schema
  */
 module.exports = new Categories(schema);

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: middleware/500.js</title>
+    <title>JSDoc: Source: models/teams/teams-schema.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: middleware/500.js</h1>
+    <h1 class="page-title">Source: models/teams/teams-schema.js</h1>
 
     
 
@@ -28,22 +28,48 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict';
 
-/**
- * 500 Middleware
- * @module middleware/500
- */
+const players = require('../players/players-schema.js');
+const mongoose = require('mongoose');
+require('mongoose-schema-jsonschema')(mongoose);
 
 /**
- * Sends a JSON Formatted 404 Response
- * @param err {string} Error Text
- * @param req {object} Express Request Object
- * @param res {object} Express Response Object
- * @param next {function} Express middleware next()
+ * Provides a mechanism to pull object data from other modules into the teams schema
+ * @param  {object}} with parameters
  */
-module.exports = (err, req, res, next) => {
-  let error = { error: err };
-  res.status(500).json(error).end();
-};</code></pre>
+const teams = mongoose.Schema({
+  name: { type:String, required:true },
+}, { toObject:{virtuals:true}, toJSON:{virtuals:true} });
+
+/**
+ * Defines the properties to push from the players collection into the teams collection
+ * @param  {collection} 'players'
+ */
+teams.virtual('players', {
+  ref: 'players',
+  localField: 'name',
+  foreignField: 'team',
+  justOne:false,
+});
+
+/**
+ * Populates the teams collection with players before the data is returned after a request
+ * @param  {method} 'find'
+ */
+teams.pre('find', function() {
+  try {
+    this.populate('players');
+  }
+  catch(e) {
+    console.error('Find Error', e);
+  }
+});
+
+/**
+ * Exports the teams schema
+ * @param  {schema} teams
+ */
+module.exports = mongoose.model('teams', teams);
+</code></pre>
         </article>
     </section>
 

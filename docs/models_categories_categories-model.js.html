@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: middleware/500.js</title>
+    <title>JSDoc: Source: models/categories/categories-model.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: middleware/500.js</h1>
+    <h1 class="page-title">Source: models/categories/categories-model.js</h1>
 
     
 
@@ -28,22 +28,25 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict';
 
+const Model = require('../memory-model.js');
 /**
- * 500 Middleware
- * @module middleware/500
+ * Memory Model
+ * @module models/Categories/categories-model
  */
 
+const schema = {
+  _id: {required:true},
+  name: {required:true},
+};
+
+class Categories extends Model {}
+
 /**
- * Sends a JSON Formatted 404 Response
- * @param err {string} Error Text
- * @param req {object} Express Request Object
- * @param res {object} Express Response Object
- * @param next {function} Express middleware next()
+ * Exports a schema for an New Category to the memory server
+ * @param  {object} schema
  */
-module.exports = (err, req, res, next) => {
-  let error = { error: err };
-  res.status(500).json(error).end();
-};</code></pre>
+module.exports = new Categories(schema);
+</code></pre>
         </article>
     </section>
 
